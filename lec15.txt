@@ -1,0 +1,25 @@
+String is a sequence of characters that are treated as a single data item and terminated by a null character '\0'. Remember that the C language does not support strings as a data type. A string is actually a one-dimensional array of characters in C language. These are often used to create meaningful and readable programs.
+// valid
+char name[13] = "StudyTonight";        
+char name[10] = {'c','o','d','e','\0'};      
+
+// Illegal
+char ch[3] = "hello";    
+char str[4];
+str = "hello";  
+
+
+#include<stdio.h>
+#include<string.h>
+
+int main()
+{
+    char s1[50], s2[50];
+
+    strcpy(s1, "StudyTonight");     
+    strcpy(s2, s1);     
+
+    printf("%s\n", s2);
+    
+    return(0);
+}
